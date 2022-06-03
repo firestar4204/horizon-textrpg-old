@@ -13,7 +13,7 @@ const machine machine_stats[] = {};
 
 machine current_machine;
 
-inline void
+static inline void
 set_current_machine_stats(machine_types type)
 {
 	current_machine = machine_stats[type];
@@ -44,5 +44,22 @@ randomize_machine_type()
 	}
 	fprintf(stderr, "ERR: Invalid machine in randomize_machine_type");
 	exit(1);
+}
+
+void
+choose_machine()
+{
+	machine_types type;
+
+	type = randomize_machine_type();
+	set_current_machine_stats(type);
+	
+	print_machine_stats(current_machine);
+}
+
+void
+print_machine_stats(machine m)
+{
+	printf("placeholder_text");
 }
 

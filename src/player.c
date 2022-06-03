@@ -3,3 +3,4 @@
 #endif
 
 #include <hrpg/player.h>
+#include <hrpg/weapon.h>

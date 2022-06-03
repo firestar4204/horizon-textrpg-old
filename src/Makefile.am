@@ -1,2 +1,2 @@
-bin_PROGRAMS = horizonrpg
-horizonrpg_SOURCES = machine.c main.c player.c rand.c
+bin_PROGRAMS = hrpg
+hrpg_SOURCES = machine.c main.c player.c rand.c

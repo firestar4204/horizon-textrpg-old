@@ -8,6 +8,7 @@
 #endif
 
 #include <hrpg/rand.h>
+#include <hrpg/machine.h>
 
 int
 main(int argc,
@@ -15,7 +16,7 @@ main(int argc,
 {
 	init_rand();
 
-	printf("The random number is: %d.\n", rand() % 51);
+	choose_machine();
 	
 	return 0;
 }

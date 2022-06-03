@@ -19,8 +19,10 @@ extern const machine machine_stats[];
 extern machine current_machine;
 
 
-inline void set_current_machine_stats(machine_types type);
+static inline void set_current_machine_stats(machine_types type);
 machine_types randomize_machine_type();
+void choose_machine();
+void print_machine_stats(machine m);
 
 #endif /* HRPG_MACHINE_H */
 

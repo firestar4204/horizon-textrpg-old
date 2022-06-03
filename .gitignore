@@ -86,6 +86,6 @@ Makefile
 # MacOS specific files
 .DS_Store
 
-src/horizonrpg
+src/hrpg
 
 *~
