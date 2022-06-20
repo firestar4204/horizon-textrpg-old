@@ -16,6 +16,7 @@ typedef struct {
 
 
 extern const machine machine_stats[];
+extern const char * machine_names[];
 extern machine current_machine;
 
 

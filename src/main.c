@@ -7,6 +7,10 @@
 #include <stdlib.h>
 #endif
 
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+
 #include <hrpg/rand.h>
 #include <hrpg/machine.h>
 
@@ -17,6 +21,8 @@ main(int argc,
 	init_rand();
 
 	choose_machine();
+	printf("\nPress any key to continue...");
+	getchar();
 	
 	return 0;
 }

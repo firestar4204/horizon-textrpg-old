@@ -9,7 +9,8 @@
 
 #include <hrpg/machine.h>
 
-const machine machine_stats[] = {};
+const char *machine_names[] = {"Watcher", "Thunderjaw", "Sawtooth", "Snapmaw"};
+const machine machine_stats[] = {{200, 55, WATCHER}, {1000, 300, THUNDERJAW}, {500, 175, SAWTOOTH}, {350, 125, SNAPMAW}};
 
 machine current_machine;
 
@@ -60,6 +61,7 @@ choose_machine()
 void
 print_machine_stats(machine m)
 {
-	printf("placeholder_text");
+	printf("You have encountered a %s.\n", machine_names[m.type]);
+	printf("It has %d HP, and %d Attack damage.\n", m.hp, m.damage);
 }
 
