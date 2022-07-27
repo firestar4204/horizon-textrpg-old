@@ -24,6 +24,7 @@ static inline void set_current_machine_stats(machine_types type);
 machine_types randomize_machine_type();
 void choose_machine();
 void print_machine_stats(machine m);
+void print_machine_health();
 
 #endif /* HRPG_MACHINE_H */
 

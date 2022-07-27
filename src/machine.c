@@ -1,6 +1,4 @@
-#ifdef HAVE_CONFIG_H
 #include <config.h>
-#endif
 
 #ifdef STDC_HEADERS
 #include <stdlib.h>
@@ -14,7 +12,7 @@ const machine machine_stats[] = {{200, 55, WATCHER}, {1000, 300, THUNDERJAW}, {5
 
 machine current_machine;
 
-static inline void
+inline void
 set_current_machine_stats(machine_types type)
 {
 	current_machine = machine_stats[type];
@@ -63,5 +61,11 @@ print_machine_stats(machine m)
 {
 	printf("You have encountered a %s.\n", machine_names[m.type]);
 	printf("It has %d HP, and %d Attack damage.\n", m.hp, m.damage);
+}
+
+void
+print_machine_health()
+{
+	printf("The %s has %d HP left.", machine_names[current_machine.type], current_machine.hp);
 }
 
