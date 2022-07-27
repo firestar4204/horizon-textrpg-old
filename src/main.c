@@ -79,6 +79,8 @@ start:
 		case 2:
 			printf("You have selected 2: Dodge.\n");
 			dodge();
+			printf("Dodge is not implemented yet!\n");
+			goto start;
 			break;
 		case 3:
 			printf("You have selected 3: Heal.\n");
