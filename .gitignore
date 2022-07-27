@@ -89,3 +89,7 @@ Makefile
 src/hrpg
 
 *~
+
+*.swp
+*.swo
+
