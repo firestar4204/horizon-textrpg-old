@@ -93,3 +93,4 @@ src/hrpg
 *.swp
 *.swo
 
+.vscode/
