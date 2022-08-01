@@ -15,11 +15,12 @@ randomize_weapon()
 {
 	short rand_number;
 
+start:
 	rand_number = (rand() % 4);
 
 	switch (rand_number) {
 		case 0:
-			return SPEAR;
+			goto start;
 			break;
 		case 1:
 			return SHARPSHOT_BOW;
@@ -33,7 +34,6 @@ randomize_weapon()
 		default:
 			fprintf(stderr, "Wrong number provided by randomize_weapon()");
 			exit(1);
-
 			break;
 	}
 }
@@ -41,9 +41,11 @@ randomize_weapon()
 void
 randomize_player_weapons()
 {
-	current_player.weapons[0] = randomize_weapon();
+	current_player.weapons[0] = SPEAR;
 	current_player.weapons[1] = randomize_weapon();
 	current_player.weapons[2] = randomize_weapon();
+	while (current_player.weapons[1] == current_player.weapons[2])
+		current_player.weapons[2] = randomize_weapon();
 }
 
 void
