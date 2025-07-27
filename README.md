@@ -1,2 +1,2 @@
 # horizon-textrpg
-A horizon fangame written in C.
+old (bad code) game
